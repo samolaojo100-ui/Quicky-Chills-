@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicky Chillis | Future of Taste in Lagos</title>
+    <meta name="description" content="Premium Suya, Jollof & Grilled Delights in Ikotun, Lagos. Order online now.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="logo">
+            <i class="fa-solid fa-pepper-hot"></i> QUICKY <span class="text-accent">CHILLIS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="floating-particles" id="particles"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="glitch-text" data-text="SPICE UP YOUR TASTE">SPICE UP YOUR TASTE</h1>
+            <p class="hero-sub">Premium Suya, Jollof & Grilled Delights in Ikotun, Lagos</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary glow-effect">View Menu</a>
+                <a href="#menu" class="btn btn-outline glow-effect">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Today's Special -->
+    <section class="special-banner glass-container">
+        <div class="special-content">
+            <h3>🔥 TODAY'S SPECIAL</h3>
+            <p>Get 20% OFF on all Suya Platters before 6 PM!</p>
+            <div class="countdown" id="countdown">00:00:00</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Who We Are</h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>At <strong>Quicky Chillis</strong>, we don't just serve food; we serve an experience. Located in the heart of Ikotun, we blend traditional Nigerian flavors with a futuristic dining experience.</p>
+                    <p>Our secret spice blend is crafted daily, ensuring every bite of our Suya and Grills packs a punch that wakes up your soul.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle text-accent"></i> 100% Fresh Ingredients</li>
+                        <li><i class="fa-solid fa-check-circle text-accent"></i> Secret Lagos Spice Blend</li>
+                        <li><i class="fa-solid fa-check-circle text-accent"></i> Fast & Friendly Service</li>
+                    </ul>
+                </div>
+                <div class="about-icons reveal">
+                    <div class="icon-box glass-card">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <span>Hot & Spicy</span>
+                    </div>
+                    <div class="icon-box glass-card">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Super Fast</span>
+                    </div>
+                    <div class="icon-box glass-card">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Fresh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            
+            <!-- Categories -->
+            <div class="menu-categories">
+                <button class="cat-btn active" onclick="filterMenu('all')">All</button>
+                <button class="cat-btn" onclick="filterMenu('suya')">Suya</button>
+                <button class="cat-btn" onclick="filterMenu('rice')">Rice</button>
+                <button class="cat-btn" onclick="filterMenu('shawarma')">Shawarma</button>
+                <button class="cat-btn" onclick="filterMenu('grills')">Grills</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-container">
+                <!-- Items injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2 class="section-title">Lagos Vibes (Reviews)</h2>
+            <div class="reviews-grid">
+                <div class="review-card glass-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Suya here is dangerous! Best in Ikotun hands down. The packaging is so premium."</p>
+                    <h4>- Tunde A.</h4>
+                </div>
+                <div class="review-card glass-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Ordered Jollof and Grilled Fish for my family. Delivery was fast and food was still hot."</p>
+                    <h4>- Chioma O.</h4>
+                </div>
+                <div class="review-card glass-card reveal">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Love the vibe. It feels like a future restaurant but the food tastes like home."</p>
+                    <h4>- Emeka D.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card reveal">
+                    <h3>📍 Location</h3>
+                    <p>H7C5+49M Abimbola Soetan St,<br>Ikotun, Lagos 102213, Nigeria</p>
+                    
+                    <h3>📞 Contact</h3>
+                    <p>+234 800 QUICKY CHILLIS</p>
+                    <p>orders@quikychillis.com</p>
+                    
+                    <h3>⏰ Hours</h3>
+                    <p>Mon - Sun: 12:00 PM – 11:00 PM</p>
+                </div>
+                <div class="map-container reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.6666!2d3.26!3d6.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzQnNDguMCJOIDPCsDE1JzM2LjAiRQ!5e0!3m2!1sen!2sng!4v1600000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass">
+        <div class="footer-content">
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2024 Quicky Chillis. Designed for the Future.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2348000000000" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-content glass-card">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button onclick="toggleCart()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items injected here -->
+                <p class="empty-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total">Total: <span id="cart-total">₦0</span></div>
+                <button onclick="openCheckout()" class="btn btn-primary full-width">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="cart-modal hidden">
+        <div class="cart-content glass-card">
+            <div class="cart-header">
+                <h2>Checkout</h2>
+                <button onclick="closeCheckout()" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="checkout-form" onsubmit="processOrder(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number (+234)</label>
+                    <input type="tel" required placeholder="080..." pattern="[0-9]*">
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <textarea required placeholder="Street, Area, Landmark"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select>
+                        <option value="pod">Pay on Delivery</option>
+                        <option value="transfer">Bank Transfer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary full-width glow-effect">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="cart-modal hidden">
+        <div class="cart-content glass-card text-center">
+            <i class="fa-solid fa-circle-check text-accent" style="font-size: 4rem; margin-bottom: 20px;"></i>
+            <h2>Order Received!</h2>
+            <p>Your food is being prepared. We will call you shortly.</p>
+            <button onclick="closeSuccess()" class="btn btn-outline">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
