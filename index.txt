@@ -1,0 +1,6 @@
+Quicky-Chillis/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    └── (Images are loaded via URL in the code, but you can save local images here later)
